@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    background-color: #3646f7;
+    color: #fff;
+    padding: 20px;
+}
+
+header .jumbotron {
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 50px;
+}
+
+main article {
+    margin-bottom: 20px;
+}
+
+main article h2 {
+    margin-top: 0;
+}
+
+main article img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+main article p {
+    margin: 10px;
+    
+}
+
+.article-card {
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: #f0f5fc;
+}
+
+.isi {
+    display: flex;
+    gap: 1.5rem;
+}
+
+aside {
+    flex: 1;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.profile header {
+    align-items: center;
+}
+
+.profile img {
+    width: 100px;
+    height: auto;
+}
+
+footer {
+    background-color: #3646f7;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    /*position: fixed;
+    width: 100%;
+    bottom: 0;*/
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        flex-flow: column nowrap;
+    }
+    
+    main article, aside {
+        width: 100%;
+    }
+    
+    main aside {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header nav ul {
+        flex-flow: row;
+        gap: 10px;
+    }
+    
+    main {
+        margin-bottom: 20px;
+    }
+    
+    main aside {
+        align-self: stretch;
+    }
+    
+    main article img {
+        width: 100%;
+        height: auto;
+    }
+    
+    footer {
+        position: static;
+    }
+}
