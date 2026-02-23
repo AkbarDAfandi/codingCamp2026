@@ -1,0 +1,183 @@
+:root {
+  --primary-color: #6495ED; 
+  --success-color: #28a745; 
+  --danger-color: #dc3545;  
+  --dark-bg: #f4f4f4;
+  --card-bg: #ffffff;
+  --text-color: #333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: var(--primary-color);
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input_section > div { 
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-right: 0.5rem;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#bookFormSubmit {
+  background-color: var(--primary-color);
+  color: white;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+#searchSubmit {
+  background-color: var(--primary-color);
+  color: white;
+  margin-top: 0.5rem;
+}
+
+[data-testid="bookItem"] {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+[data-testid="bookItemTitle"] {
+  font-size: 1.25rem;
+  color: #222;
+}
+
+[data-testid="bookItemAuthor"], 
+[data-testid="bookItemYear"] {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+[data-testid="bookItem"] > div {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+[data-testid="bookItemIsCompleteButton"] {
+  background-color: var(--success-color);
+  color: white;
+  flex: 1;
+}
+
+[data-testid="bookItemDeleteButton"] {
+  background-color: var(--danger-color);
+  color: white;
+  flex: 1;
+}
+
+[data-testid="bookItemEditButton"] {
+  background-color: #ffc107; 
+  color: #333;
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  [data-testid="bookItem"] > div {
+    flex-direction: column;
+  }
+}
+
+label[for="bookFormIsComplete"] {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+#bookFormIsComplete {
+  display: inline-block;
+  width: auto; 
+  margin-left: 10px; 
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+
+#bookFormIsComplete {
+    margin-top: 0; 
+}
