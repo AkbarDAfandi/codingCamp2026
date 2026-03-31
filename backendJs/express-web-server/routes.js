@@ -1,0 +1,36 @@
+import express from 'express';
+ 
+const router = express.Router();
+ 
+router.get('/', (_, res) => {
+  res.send('Homepage');
+});
+
+router.all('/', (_, res) => {
+  res.status(405).send('Halaman tidak dapat diakses dengan method tersebut');
+});
+ 
+router.get('/about', (_, res) => {
+  res.send('About page');
+});
+
+router.all('/about', (_, res) => {
+  res.status(405).send('Halaman tidak dapat diakses dengan method tersebut');
+});
+
+router.get('/hello/{:name}', (req, res) => {
+  const { name = 'stranger' } = req.params;
+  const { lang } = req.query;
+
+  if( lang === 'id' ) {
+    return res.send(`Hai, ${name}!`)
+  }
+
+  res.send(`Hello, ${name}!`);
+});``
+
+router.use((_, res) => {
+  res.send('Halaman tidak ditemukan');
+});
+ 
+export default router;
